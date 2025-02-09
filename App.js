@@ -39,7 +39,7 @@ Check the top-level render call using <div>. See https://reactjs.org/link/warnin
                     "id": "heading2",
                     "className": "green-h1"
                 },
-                'Learnt sibling Elements in React')
+                'Checking parcel effects')
         ]
     ),
     React.createElement("div",
@@ -61,7 +61,7 @@ Check the top-level render call using <div>. See https://reactjs.org/link/warnin
                     "id": "heading3",
                     "className": "green-h1"
                 },
-                'Learnt sibling Elements in React')
+                'Checking parcel effects')
         ]
     )
 ]);

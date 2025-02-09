@@ -28,6 +28,22 @@ Though we imported React and ReactDOM from react and react-dom respectively, app
 ### Parcel
 - Dev build
 - Local Server
+- HMR = Hot module Replacement
+- File Watching Algorithm - written in c++
+- caching things for you
+- Image optimization
+- Minification
+- Bundle
+- Compress
+- consistent Hashing
+- Code Splitting
+- Differential Bundling - support older browser
+- Good error handling
+- Diagnostic 
+- HTTPS
+- Remove unused code 
+
+
 
 
 
