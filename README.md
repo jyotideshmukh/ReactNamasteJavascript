@@ -63,7 +63,21 @@ Though we imported React and ReactDOM from react and react-dom respectively, app
      "start": "npx parcel index.html",
      "build": "npx parcel build index.html",
      ```
+## JSx
+- It is bit difficult to create html element tag  with React CreateElement, we can use JSx
+- JSx is HTMLlike or XML like structure
+- In below example , both heading and jsxHeading are same objects
+```
+const heading = React.createElement("h1",
+    {id: "heading"},
+    "H1 heading using React 🚀"
+);
 
+console.log(heading);
+//JSx heading
+const jsxHeading = <h1 id="jsxheading">H1 heading using JSx 🚀</h1>;
+console.log(jsxHeading);
+```
 
 
 
