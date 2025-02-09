@@ -43,6 +43,15 @@ Though we imported React and ReactDOM from react and react-dom respectively, app
 - HTTPS
 - Remove unused code 
 
+## How to add scripts 
+- We can add scripts for creating different things in package.json under scripts key
+- I have added scripts to create build in dev and prod environments
+ 
+     ```
+     "start": "npx parcel index.html",
+     "build": "npx parcel build index.html",
+     ```
+
 
 
 
