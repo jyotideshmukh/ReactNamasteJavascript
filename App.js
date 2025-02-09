@@ -7,13 +7,28 @@ const heading = React.createElement("div",
     { id: "parent" },
     React.createElement("div",
         { id: "child" },
-        React.createElement(
+        [
+            //When we need to create siblings tags, 
+            // we can use array as third parameter
+            //  and create multiple comma separated elements 
+
+
+            React.createElement(
             "h1",
             {
                 "id": "heading",
                 "className": "green-h1"
             },
-            'Hello World from React')));
+            'Hello World from React H1'),
+            React.createElement(
+                "h2",
+                {
+                    "id": "heading",
+                    "className": "green-h1"
+                },
+                'Learnt sibling Elements in React')
+            ]
+        ));
 console.log(heading);
 //create root in react
 const root = ReactDOM.createRoot(document.getElementById("root"));
