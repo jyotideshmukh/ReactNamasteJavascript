@@ -1,0 +1,28 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is for learning React",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyotideshmukh/ReactNamasteJavascript"
+  },
+  "keywords": [
+    "react",
+    "learning",
+    "react",
+    "Jyoti"
+  ],
+  "author": "Jyoti Pawar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jyotideshmukh/ReactNamasteJavascript/issues"
+  },
+  "homepage": "https://github.com/jyotideshmukh/ReactNamasteJavascript/blob/master/README.md",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
