@@ -1,14 +1,24 @@
 # Learning React from NamsteJavaScript(Akshay Saini)
 ## Fundamental concepts
 ### Install parcel using command
-- npm install -D parcel # -D used for dev environment mena we need parcel only in dev enviroment
+-  -D used for dev environment mena we need parcel only in dev enviroment
+```
+npm install -D parcel
+``` 
 ### how to start server using parcel
-- npx parcel index.html
+```
+npx parcel index.html
+```
 
 ### install react
-- npm install react
+```
+npm install react
+```
 ### install react dom
-- npm i react-dom #I used instead of install to install as shortform for install
+```
+npm i react-dom
+```
+ - I used instead of install to install as shortform for install
 
 ### Remove CDN links of React
 now we removed CDN links used for react and then checked webpage but giving error as
@@ -23,7 +33,9 @@ Though we imported React and ReactDOM from react and react-dom respectively, app
 #to solve above error we need to include script as module
 
 ### How to include App.js as module
-- e.g <script type="module" src="./App.js"></script>
+```
+<script type="module" src="./App.js"></script>
+```
 
 ### Parcel
 - Dev build
