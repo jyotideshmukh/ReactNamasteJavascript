@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom/client"
 //how to create element in react 
 //in createElement-- first param is tag
 //second param is object for giving multiple attributes, 
@@ -30,7 +32,7 @@ Check the top-level render call using <div>. See https://reactjs.org/link/warnin
                     "id": "heading1",
                     "className": "green-h1"
                 },
-                'Hello World from React H1'),
+                'Hello World from React H1 🚀'),
             React.createElement(
                 "h2",
                 {
@@ -65,6 +67,7 @@ Check the top-level render call using <div>. See https://reactjs.org/link/warnin
 ]);
 console.log(heading);
 //create root in react
+console.log(ReactDOM);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //rendering heading inside root
 root.render(heading);
