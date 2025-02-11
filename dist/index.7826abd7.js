@@ -2958,15 +2958,20 @@ console.log(heading);
 //JSx heading
 const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
     id: "jsxheading",
-    children: "H1 heading using JSx \uD83D\uDE80"
-}, void 0, false, {
+    style: "color:red;",
+    children: [
+        "React is ",
+        10,
+        " times better with  JSX \uD83D\uDE80"
+    ]
+}, void 0, true, {
     fileName: "App.js",
     lineNumber: 11,
     columnNumber: 20
 }, undefined);
 console.log(jsxHeading);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(jsxHeading);
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
