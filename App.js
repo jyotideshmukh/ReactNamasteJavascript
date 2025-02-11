@@ -1,21 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "H1 heading using React 🚀"
-);
+const Title = () => {
+    return <h1 id="heading">React Components</h1>;
+}
 
-console.log(heading);
-//JSx heading -> it is HTML like or XML like format-> Babel transpiles it to React CreateElement
-//We can use circular brackets to write JSX in multiple lines
-const jsxHeading = (
-  <h1 id="jsxheading" style="color:red;">
-    React is {5 + 5} times better with JSX 🚀
-  </h1>
-);
-console.log(jsxHeading);
+const ContentOfBody = () =>
+{
+    return (
+            <>
+            <Title />
+            <div>
+                <div>Container div</div>
+                <p> This is learning how JSX can placed in different ways in JSX container</p>
+            </div>
+            </>
+        
+       
+    )
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(jsxHeading);
+root.render(<ContentOfBody />);

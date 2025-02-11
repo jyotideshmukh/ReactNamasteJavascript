@@ -78,7 +78,10 @@ console.log(heading);
 const jsxHeading = <h1 id="jsxheading">H1 heading using JSx 🚀</h1>;
 console.log(jsxHeading);
 ```
-
+## React components
+ - there are two types of react components
+ -- Class Components
+ -- Functional componnets
 
 
 
