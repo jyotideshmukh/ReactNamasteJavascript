@@ -79,9 +79,35 @@ const jsxHeading = <h1 id="jsxheading">H1 heading using JSx 🚀</h1>;
 console.log(jsxHeading);
 ```
 ## React components
- - there are two types of react components
- -- Class Components
- -- Functional componnets
+ There are two types of react components
+ - Class Components
+ -  Functional componnets
+```
+const Title = () => {
+    return <h1 id="heading">React Components</h1>;
+}
+```
+## How to render class components
+```
+const Title = () => {
+    return <h1 id="heading">React Components</h1>;
+}
 
+const ContentOfBody = () =>
+{
+    return (
+            <>
+            <Title />
+            <div>
+                <div>Container div</div>
+                <p> This is learning how JSX can placed in different ways in JSX container</p>
+            </div>
+            </>     
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<ContentOfBody />);
+```
 
 
