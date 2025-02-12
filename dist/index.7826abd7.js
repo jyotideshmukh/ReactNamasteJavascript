@@ -2951,60 +2951,241 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-const Title = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        id: "heading",
-        children: "React Components"
+/**
+ * Header
+ *   - Logo
+ *   - Navbar
+ * Body-Container
+ *   - Search
+ *   - Restorent Card Container
+ *       - Resto card
+ * Footer
+ *    - Copyright
+ *    - Contact Us
+ *    - Social Media links
+ */ const Logo = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "logo-container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            src: "https://www.canva.com/design/DAGe3MCijkM/E78vK-ZV_TrxP7PH0263UA/edit?utm_content=DAGe3MCijkM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+        }, void 0, false, {
+            fileName: "App.js",
+            lineNumber: 19,
+            columnNumber: 9
+        }, undefined)
     }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 5,
-        columnNumber: 12
+        lineNumber: 18,
+        columnNumber: 5
     }, undefined);
 };
-_c = Title;
-const ContentOfBody = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+_c = Logo;
+const Navbar = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: "nav",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                children: "Home"
+            }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 12,
+                lineNumber: 26,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: "Container div"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 14,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: " This is learning how JSX can placed in different ways in JSX container"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 15,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                children: "About Us"
+            }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 13,
+                lineNumber: 27,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                children: "Contact Us"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 28,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                children: "Cart"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 29,
                 columnNumber: 13
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 25,
+        columnNumber: 9
+    }, undefined);
 };
-_c1 = ContentOfBody;
+_c1 = Navbar;
+const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Logo, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 36,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Navbar, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 37,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 35,
+        columnNumber: 5
+    }, undefined);
+};
+_c2 = Header;
+const Search = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "searchbar",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+            type: "text"
+        }, void 0, false, {
+            fileName: "App.js",
+            lineNumber: 44,
+            columnNumber: 8
+        }, undefined)
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 43,
+        columnNumber: 5
+    }, undefined);
+};
+_c3 = Search;
+const RestoCard = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "logo",
+                src: "https://www.zomato.com/pune/faasos-wraps-rolls-shawarma-shaniwar-peth/order"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 51,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "Shree Ata Chakki"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 52,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "Masale, Ata, Pickles"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 53,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                children: "4.5"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 54,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 50,
+        columnNumber: 9
+    }, undefined);
+};
+_c4 = RestoCard;
+const ResContainer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "ResContainer",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestoCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 61,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestoCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 62,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestoCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 63,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 60,
+        columnNumber: 5
+    }, undefined);
+};
+_c5 = ResContainer;
+const AppContainer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "app-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("search", {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 70,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResContainer, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 71,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 69,
+        columnNumber: 5
+    }, undefined);
+};
+_c6 = AppContainer;
+const AppLayout = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "appcontainer",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 78,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppContainer, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 79,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 77,
+        columnNumber: 5
+    }, undefined);
+};
+_c7 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ContentOfBody, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 24,
+    lineNumber: 85,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
-$RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "ContentOfBody");
+var _c, _c1, _c2, _c3, _c4, _c5, _c6, _c7;
+$RefreshReg$(_c, "Logo");
+$RefreshReg$(_c1, "Navbar");
+$RefreshReg$(_c2, "Header");
+$RefreshReg$(_c3, "Search");
+$RefreshReg$(_c4, "RestoCard");
+$RefreshReg$(_c5, "ResContainer");
+$RefreshReg$(_c6, "AppContainer");
+$RefreshReg$(_c7, "AppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
