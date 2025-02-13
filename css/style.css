@@ -1,51 +1,92 @@
-.header{
-    padding: 5px 20px;
-    display: flex;
-    justify-content: space-between;
-}
-.logo-container{
-    width: 20%;
-    height: 100px;
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo-img{
-    width: 100%;
-    height: 100%;
+/* Ensure HTML and Body take full width */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Disable horizontal scrolling */
 }
-.searchbar{
-    width: 30%;
-    padding: 25px 10px;
-}
-.search{
-    width:300px;
-    margin: 10px;
-}
-.nav{
-    width: 40%;
-}
-.nav >ul{
-    display:flex;
-    
 
+/* Example of a full-width element */
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
 }
-.nav >ul >li{
-    margin: 10px;
-    padding: 10px;
-    list-style: none;
+
+h1 {
+  font-size: 3rem;
+  color: darkblue;
 }
-.card-container{
-display: flex;
+.header {
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
 }
-.card{
-    width: 20%;
-   background-color: beige;
-   margin: 10px;
+.logo-container {
+  width: 20%;
+  height: 100px;
+  padding: 10px 0;
 }
 .card-img-container{
-    width: 100%;
-    height: 75px;
+    width: 20%;
+  height: 100px;
+  padding: 10px 0;
 }
-.card-img-container > .logo-img{
-    height: 100%;
-    width: 175px;
+.logo-img {
+  width: 100%;
+  height: 100%;
+}
+.searchbar {
+  width: 30%;
+  padding: 25px 10px;
+}
+.search {
+  width: 300px;
+  margin: 10px;
+}
+.nav {
+  width: 40%;
+}
+.nav > ul {
+  display: flex;
+}
+.nav > ul > li {
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+}
+.app-container {
+  width: 100%;
+}
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 23%;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+ 
+}
+.card:hover {
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+.card-img-container {
+  width: 100%;
+  height: 150px;
+}
+.card-img-container > .logo-img {
+  height: 100%;
+  width: 175px;
 }
