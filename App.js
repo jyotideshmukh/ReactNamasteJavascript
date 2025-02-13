@@ -16,24 +16,27 @@ import ReactDOM from "react-dom/client";
 const Logo =() => {
     return (
     <div className="logo-container">
-        <img src="https://www.canva.com/design/DAGe3MCijkM/E78vK-ZV_TrxP7PH0263UA/edit?utm_content=DAGe3MCijkM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" />
+        <img className="logo-img" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All"/>
     </div>
     )
 }
 const Navbar = () =>{
     return (
-        <ul className="nav">
+        <div className="nav">
+        <ul>
             <li>Home</li>
             <li>About Us</li>
             <li>Contact Us</li>
             <li>Cart</li>
         </ul>
+        </div>
     )
 }
 const Header =() => {
     return (
     <div className="header">
         <Logo></Logo>
+        <Search />
         <Navbar></Navbar>
     </div>
     )
@@ -41,14 +44,16 @@ const Header =() => {
 const Search =() => {
     return (
     <div className="searchbar">
-       <input type="text" />
+       <input className="search" type="text" />
     </div>
     )
 }
 const RestoCard = () =>{
     return (
         <div className="card">
-            <img className="logo" src="https://www.zomato.com/pune/faasos-wraps-rolls-shawarma-shaniwar-peth/order"></img>
+            <div className="card-img-container">
+            <img className="logo-img" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All"/>
+            </div>
             <h3>Shree Ata Chakki</h3>
             <h4>Masale, Ata, Pickles</h4>
             <h5>4.5</h5>
@@ -57,7 +62,10 @@ const RestoCard = () =>{
 }
 const ResContainer = () =>{
     return (
-    <div className="ResContainer">
+    <div className="card-container">
+        <RestoCard />
+        <RestoCard />
+        <RestoCard />
         <RestoCard />
         <RestoCard />
         <RestoCard />
