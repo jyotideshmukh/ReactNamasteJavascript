@@ -215,3 +215,20 @@ App.js:1724
     -- Suppose we want to add one item dynamically in list, and we not assign key to item then React renders all items .
     -- If we add key, React renders only that item
 - Don't assign index as key( React recommandation)    
+
+# export import
+- there are two types of export
+- named export
+```
+//defined constants in constants.js
+export const LOGO_URL = "PATH OF logo";
+//how to import 
+import { LOGO_URL } from "../utils/constants"
+```
+- default export
+```
+//defined Header in Header.js
+export default Header;
+//how to import 
+import Header from "./components/Header"
+```
