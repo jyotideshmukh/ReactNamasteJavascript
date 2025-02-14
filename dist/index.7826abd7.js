@@ -4799,7 +4799,7 @@ const ResContainer = ()=>{
         className: "card-container",
         children: resData.map((restorantData)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestoCard, {
                 restoData: restorantData.info
-            }, void 0, false, {
+            }, restorantData.info.id, false, {
                 fileName: "App.js",
                 lineNumber: 1741,
                 columnNumber: 43
