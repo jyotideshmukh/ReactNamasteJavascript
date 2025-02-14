@@ -172,3 +172,46 @@ const ResContainer = () => {
     )
 }
 ```
+## Rendering Items - list must have Key
+- while rendering list , react expect to add key for each items in lst otherwise it shows warning
+```
+Each child in a list should have a unique "key" prop.
+
+Check the render method of `ResContainer`. See https://react.dev/link/warning-keys for more information. Error Component Stack
+    at ResContainer (<anonymous>)
+    at div (<anonymous>)
+    at AppContainer (<anonymous>)
+    at div (<anonymous>)
+    at AppLayout (<anonymous>)
+overrideMethod @ hook.js:608
+console.<computed> @ index.js:1
+validateExplicitKey @ react-jsx-dev-runtime.development.js:586
+validateChildKeys @ react-jsx-dev-runtime.development.js:534
+jsxDEVImpl @ react-jsx-dev-runtime.development.js:456
+exports.jsxDEV @ react-jsx-dev-runtime.development.js:658
+ResContainer @ App.js:1739
+react-stack-bottom-frame @ react-dom-client.development.js:22428
+renderWithHooks @ react-dom-client.development.js:5757
+updateFunctionComponent @ react-dom-client.development.js:8018
+beginWork @ react-dom-client.development.js:9683
+runWithFiberInDEV @ react-dom-client.development.js:543
+performUnitOfWork @ react-dom-client.development.js:15044
+workLoopSync @ react-dom-client.development.js:14870
+renderRootSync @ react-dom-client.development.js:14850
+performWorkOnRoot @ react-dom-client.development.js:14334
+performWorkOnRootViaSchedulerTask @ react-dom-client.development.js:15931
+performWorkUntilDeadline @ scheduler.development.js:44Understand this errorAI
+App.js:1724 
+```
+- How to add key to list items
+```
+<div className="card-container">
+            {
+                resData.map((restorantData) => <RestoCard key={restorantData.info.id} restoData={restorantData.info} />)
+            }
+        </div>
+```
+- Why we need to give key?
+    -- Suppose we want to add one item dynamically in list, and we not assign key to item then React renders all items .
+    -- If we add key, React renders only that item
+- Don't assign index as key( React recommandation)    
