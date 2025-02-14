@@ -2,7 +2,7 @@ import { RESTAURANT_URL }  from "../utils/constants";
 
 const Card = (props) => {
     //console.log(props);
-    const { name, cuisines, costForTwo, cloudinaryImageId } = props?.restoData;
+    const { name, cuisines, costForTwo, cloudinaryImageId , avgRatingString} = props?.restoData;
     return (
         <div className="card">
             <div className="card-img-container">
@@ -11,6 +11,7 @@ const Card = (props) => {
             <h3>{name}</h3>
             <h4>{cuisines.join(", ")}</h4>
             <h5>{costForTwo}</h5>
+            <h5>{avgRatingString}</h5>
         </div>
     )
 }
