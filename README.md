@@ -109,5 +109,66 @@ const ContentOfBody = () =>
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<ContentOfBody />);
 ```
+## Composition of Components
+- We can nest multiple componnets into one another
+- we can reuse the react components at many places
+- how to achieve?
 
+```
+const ResContainer = () => {
+    return (
+        <div className="card-container">
+            {
+                resData.map((restorantData) => <RestoCard key={restorantData.info.id} restoData={restorantData.info} />)
+            }
+        </div>
+    )
+}
+const AppContainer = () => {
+    return (
+        <div className="app-container">
+            <search></search>
+            <ResContainer></ResContainer>
+        </div>
+    )
+}
+const AppLayout = () => {
+    return (
+        <div className="content">
+            <Header />
+            <AppContainer />
+        </div>
+    )
+}
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />)
+
+```
+
+## How to achieve config driven develeopment
+```
+const RestoCard = (props) => {
+    console.log(props);
+    const { name, cuisines, costForTwo, cloudinaryImageId } = props?.restoData;
+    return (
+        <div className="card">
+            <div className="card-img-container">
+                <img className="logo-img" src={"PATH OF IMAGE" + cloudinaryImageId} />
+            </div>
+            <h3>{name}</h3>
+            <h4>{cuisines.join(", ")}</h4>
+            <h5>{costForTwo}</h5>
+        </div>
+    )
+}
+const ResContainer = () => {
+    return (
+        <div className="card-container">
+            {
+                resData.map((restorantData) => <RestoCard key={restorantData.info.id} restoData={restorantData.info} />)
+            }
+        </div>
+    )
+}
+```

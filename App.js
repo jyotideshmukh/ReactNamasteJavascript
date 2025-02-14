@@ -13,39 +13,39 @@ import ReactDOM from "react-dom/client";
  *    - Contact Us
  *    - Social Media links
  */
-const Logo =() => {
+const Logo = () => {
     return (
-    <div className="logo-container">
-        <img className="logo-img" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All"/>
-    </div>
-    )
-}
-const Navbar = () =>{
-    return (
-        <div className="nav">
-        <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Cart</li>
-        </ul>
+        <div className="logo-container">
+            <img className="logo-img" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All" />
         </div>
     )
 }
-const Header =() => {
+const Navbar = () => {
     return (
-    <div className="header">
-        <Logo></Logo>
-        <Search />
-        <Navbar></Navbar>
-    </div>
+        <div className="nav">
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Cart</li>
+            </ul>
+        </div>
     )
 }
-const Search =() => {
+const Header = () => {
     return (
-    <div className="searchbar">
-       <input className="search" type="text" />
-    </div>
+        <div className="header">
+            <Logo></Logo>
+            <Search />
+            <Navbar></Navbar>
+        </div>
+    )
+}
+const Search = () => {
+    return (
+        <div className="searchbar">
+            <input className="search" type="text" />
+        </div>
     )
 }
 const resData = [
@@ -1720,13 +1720,13 @@ const resData = [
         }
     }
 ];
-const RestoCard = (props) =>{
+const RestoCard = (props) => {
     console.log(props);
-    const { name, cuisines, costForTwo,cloudinaryImageId } = props?.restoData;
+    const { name, cuisines, costForTwo, cloudinaryImageId } = props?.restoData;
     return (
         <div className="card">
             <div className="card-img-container">
-            <img className="logo-img" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId }/>
+                <img className="logo-img" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} />
             </div>
             <h3>{name}</h3>
             <h4>{cuisines.join(", ")}</h4>
@@ -1734,33 +1734,30 @@ const RestoCard = (props) =>{
         </div>
     )
 }
-const ResContainer = () =>{
+const ResContainer = () => {
     return (
-    <div className="card-container">
-        {
-            resData.map((restorantData) =><RestoCard key={restorantData.info.id} restoData={restorantData.info}/>)
-        }
-        
-        
-        
-    </div>
+        <div className="card-container">
+            {
+                resData.map((restorantData) => <RestoCard key={restorantData.info.id} restoData={restorantData.info} />)
+            }
+        </div>
     )
 }
-const AppContainer =() => {
+const AppContainer = () => {
     return (
-    <div className="app-container">
-        <search></search>
-        <ResContainer></ResContainer>
-    </div>
+        <div className="app-container">
+            <search></search>
+            <ResContainer></ResContainer>
+        </div>
     )
 }
 const AppLayout = () => {
-  return  ( 
-    <div className="content">
-    <Header />
-    <AppContainer />
-    </div>
-   )
+    return (
+        <div className="content">
+            <Header />
+            <AppContainer />
+        </div>
+    )
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
