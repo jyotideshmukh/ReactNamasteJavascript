@@ -216,7 +216,7 @@ App.js:1724
     -- If we add key, React renders only that item
 - Don't assign index as key( React recommandation)    
 
-# export import
+## export import
 - there are two types of export
 - named export
 ```
@@ -232,3 +232,10 @@ export default Header;
 //how to import 
 import Header from "./components/Header"
 ```
+
+## React Hooks
+- useState - useState is a React Hook that lets you add a state variable to your component.
+- useEffect- useEffect is a React Hook that lets you synchronize a component with an external system.
+
+## Shimmer UI
+Show fake cards with gray UI
