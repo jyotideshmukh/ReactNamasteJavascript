@@ -28,12 +28,8 @@ const CardContainer = () => {
         console.log("Let see when it prints")
 
     }
-    if (listOfRestarunt.length === 0) {
-        console.log(<Shimmer />)
-        return  <Shimmer />
-    }
 
-    return (
+    return listOfRestarunt.length === 0 ? (<Shimmer />):(
         <>
             <div className="card-container">
                 <button
