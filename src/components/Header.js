@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { LOGO_URL } from "../utils/constants"
 const Logo = () => {
     return (
@@ -7,6 +8,7 @@ const Logo = () => {
     )
 }
 const Navbar = () => {
+    const [btnLogin, setBtnLogin] = useState("Login");
     return (
         <div className="nav">
             <ul>
@@ -14,22 +16,24 @@ const Navbar = () => {
                 <li>About Us</li>
                 <li>Contact Us</li>
                 <li>Cart</li>
+                <li>
+                    <button 
+                    className="btn-login"
+                    onClick={()=>{
+                        btnLogin === "Login" ?
+                        setBtnLogin("Logout"):
+                        setBtnLogin("Login");
+
+                    }}>{btnLogin}</button></li>
             </ul>
         </div>
     )
 }
-const Search = () => {
-    return (
-        <div className="searchbar">
-            <input className="search" type="text" />
-        </div>
-    )
-}
+
 const Header = () => {
     return (
         <div className="header">
             <Logo></Logo>
-            <Search />
             <Navbar></Navbar>
         </div>
     )

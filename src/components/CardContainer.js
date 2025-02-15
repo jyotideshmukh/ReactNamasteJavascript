@@ -7,11 +7,11 @@ import Shimmer from "./Shimmer";
 
 const CardContainer = () => {
     const [listOfRestarunt, setListOfRestarunt] = useState([]);
-
+    const [searchText, setSearchText] = useState("");
     useEffect(() => {
         fetchdata()
 
-    })
+    },[])
     async function fetchdata() {
 
         try {
@@ -20,18 +20,38 @@ const CardContainer = () => {
             let list = await data.json();
             //console.log(list.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
             setListOfRestarunt(list?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-            console.log("test")
+            //console.log("test")
         } catch (
         error) {
             console.error(error)
         }
-        console.log("Let see when it prints")
+        //console.log("Let see when it prints")
 
     }
-
+    fetchdata()
+    const Search = () => {
+        return (
+            <div className="searchbar">
+                <input 
+                className="search" 
+                type="text" 
+                value={searchText} 
+                onChange={(e)=>{
+                    setSearchText(e.target.value);
+                    console.log(searchText)
+                }}/>
+                <button onClick={()=>{
+                  //fetchdata();  
+                  const filterRes = listOfRestarunt.filter((res) => res.info.name.toLowerCase().include(searchText.toLowerCase()))
+                  setListOfRestarunt(filterRes);
+                }}>Search</button>
+            </div>
+        )
+    }
     return listOfRestarunt.length === 0 ? (<Shimmer />):(
         <>
             <div className="card-container">
+                <Search />
                 <button
                     onClick={() => {
                         const filterRes = listOfRestarunt.filter((res) => res.info.avgRatingString > 4.5)
