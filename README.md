@@ -236,6 +236,41 @@ import Header from "./components/Header"
 ## React Hooks
 - useState - useState is a React Hook that lets you add a state variable to your component.
 - useEffect- useEffect is a React Hook that lets you synchronize a component with an external system.
+```
+//In below examplw searchText is variable and setSearchText is function  through we set the value of searchText and react automatically renders this compnent using React fire Architecture 
+const [searchText, setSearchText] = useState("");
+setSearchText("Query which we going to search"); // how we set value of searchText
+
+//useEffect is hook which renders after component is rendered
+    useEffect(() => {
+        fetchdata()
+
+    },[])
+```
 
 ## Shimmer UI
 Show fake cards with gray UI
+
+## Routes
+- for routes we use react-router-dom package
+- npm install react-router-dom
+- we use createBrowserRouter, RouterProvider to get routes
+```
+import { createBrowserRouter, RouterProvider } from "react-router";
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout/>,
+        errorElement: <Error />
+
+    },
+    {
+        path: "/about",
+        element: <About/>
+
+    },
+]
+)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={appRouter} />)
+```
