@@ -274,3 +274,11 @@ const appRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />)
 ```
+- For displaying route errors we use useRouteError hook of react-router
+```
+import { useRouteError } from "react-router"
+const Error = () => {
+    const err = useRouteError();
+    console.log(err);
+}
+```
