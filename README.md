@@ -282,3 +282,44 @@ const Error = () => {
     console.log(err);
 }
 ```
+- There are two types of rendering - clientside and serverside
+- for client sending we can use <outlet /> component
+- Instaed of anchoor tags we can use <link to="/">Home</Link> tag
+```
+//Link Component
+<li><Link to={"/"}>Home</Link></li>
+```
+```
+//How to use Outlet component to show content depends on route
+const AppLayout = () => {
+    return (
+        <div className="content">
+            <Header />
+            <Outlet />
+        </div>
+    )
+}
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout/>,
+        errorElement: <Error />,
+        children:
+            [{
+                path: "/",
+                element: <Body/>
+        
+            },
+                {
+                path: "/contact",
+                element: <Contact/>
+        
+            },
+            {
+                path: "/about",
+                element: <About/>
+        
+            }]
+        
+        }]
+```

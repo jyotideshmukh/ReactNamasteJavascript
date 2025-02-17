@@ -47,7 +47,11 @@ const CardContainer = () => {
                   const filteredListOfRestarunt = listOfRestarunt.filter((res) => {
                     console.log(searchText.toLowerCase())
                     console.log(res.info.name.toLowerCase() )
-                    return res.info.name.toLowerCase().includes(searchText.toLowerCase())
+                    return (
+                        res.info.name.toLowerCase().includes(searchText.toLowerCase()) 
+                        ||
+                        res.info.cuisines.join(", ").toLowerCase().includes(searchText.toLowerCase())
+                    )
                     
                 })
                 setFilteredListOfRestarunt(filteredListOfRestarunt)
