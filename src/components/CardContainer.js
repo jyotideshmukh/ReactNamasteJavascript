@@ -53,15 +53,16 @@ const CardContainer = () => {
                 setFilteredListOfRestarunt(filteredListOfRestarunt)
                   
                 }}>Search</button>
-            </div>
-        
-                <button
+                <button className="top-rated-button"
                     onClick={() => {
                         const filterRes = listOfRestarunt.filter((res) => res.info.avgRatingString > 4.5)
                         setFilteredListOfRestarunt(filterRes);
                     }}
                 >Top Rated</button>
             </div>
+            </div>
+        
+                
             <div className="card-container">
                 {
                     filteredListOfRestarunt.map((restorantData) => <Card key={restorantData.info.id} restoData={restorantData.info} />)

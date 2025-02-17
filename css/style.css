@@ -46,13 +46,17 @@ h1 {
   height: 100%;
 }
 .searchbar {
-  width: 30%;
+  width: 100%;
   padding: 25px 10px;
 }
 .search {
   width: 300px;
   margin: 10px;
 }
+.top-rated-button{
+  margin-left: 1%;
+}
+
 .nav {
   width: 40%;
 }
