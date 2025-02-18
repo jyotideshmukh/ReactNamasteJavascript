@@ -108,3 +108,6 @@ text-decoration: none;
   margin: 10px;
   height: 250px;
 }
+.user-class ul > li{
+ text-decoration: none;
+}
