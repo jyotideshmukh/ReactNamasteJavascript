@@ -14,13 +14,25 @@ class UserClass extends React.Component {
         const { name, address, location } = this.props;
         const { count, count2 } = this.state;
         return (
-            <ul className="user-class">
+            
+          
+                <div className="user-class">
+                <button onClick={()=>{
+                    //how to modify the state variables
+                    this.setState({
+                        count:this.state.count+1
+                })
+                    console.log(count);
+                }}>Increase Count</button>
+                <ul>
                 <li>Count: {count}</li>
-                <li>Count2: {count2}</li>
                 <li>Name: {name}</li>
                 <li>Address: {address}</li>
                 <li>Location: {location}</li>
-            </ul>
+                </ul>
+                </div>
+            
+            
         );
     }
 }
