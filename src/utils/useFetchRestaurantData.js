@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
-import { RESTAURANTDETAIL_URL } from "../utils/constants"
+import { API_URL } from "../utils/constants"
 
-const useFetchRestaurantData = async (resId) => {
+const useFetchRestaurantData = async () => {
     const [resData, setResData] = useState(null)
     useEffect(() => {
         fetchResdata()
@@ -9,8 +9,10 @@ const useFetchRestaurantData = async (resId) => {
     }, [])
 
     const fetchResdata = async () => {
-        const data = await fetch(RESTAURANTDETAIL_URL + resId);
-        let restaurantData = await data.json();
+        const data = await fetch(API_URL)
+
+        let list = await data.json();
+        const restaurantList = list?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         setResData(resData)
     }
     return resData
