@@ -1,5 +1,6 @@
 import { useState } from "react";
 const Search = (props) => {
+    const [searchText, setSearchText] = useState("");
     const {restaurants} = props.restaurants
     const [filteredListOfRestarunt, setFilteredListOfRestarunt] = useState([]);
 

@@ -9,10 +9,13 @@ const useFetchRestaurantDetails = async (resId) => {
     }, [])
 
     const fetchResdata = async () => {
-        const data = await fetch(RESTAURANTDETAIL_URL + resId);
-        let restaurantData = await data.json();
+        const data = await fetch(RESTAURANTDETAIL_URL+resId);
+        console.log(RESTAURANTDETAIL_URL+resId)
+        const resData = await data.json();
+        console.log("RESDATA"+resData)
         setResDetailData(resData)
+        return resDetailData
     }
-    return resData
+    
 }
 export default useFetchRestaurantDetails;
