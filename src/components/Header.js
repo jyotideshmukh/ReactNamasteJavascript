@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { LOGO_URL } from "../utils/constants"
 import { Link } from "react-router"
+import useOnlineStatus from "../utils/useOnlineStatus"
 const Logo = () => {
     return (
         <div className="logo-container">
@@ -13,6 +14,7 @@ const Navbar = () => {
     return (
         <div className="nav">
             <ul>
+                <li>Online Status {useOnlineStatus()===true ? '🟢': '🔴'}</li>
                 <li><Link to={"/"}>Home</Link></li>
                 <li><Link to={"/about"}>About Us</Link></li>
                 <li><Link to={"/contact"}>Contact Us</Link></li>
