@@ -4,7 +4,7 @@ import { Link } from "react-router"
 import useOnlineStatus from "../utils/useOnlineStatus"
 const Logo = () => {
     return (
-        <div className="logo-container h-30 border-2">
+        <div className="logo-container h-30">
             <img className="w-50 h-25" src={LOGO_URL} />
         </div>
     )
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <li className="p-2  hover:bg-gray-200">Cart</li>
                 <li className="p-2">
                     <button 
-                    className="p-1 bg-blue-300"
+                    className="ml-2 p-2 bg-red-600 border-red-800 border-1 rounded-sm text-amber-50"
                     onClick={()=>{
                         btnLogin === "Login" ?
                         setBtnLogin("Logout"):

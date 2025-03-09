@@ -42,7 +42,7 @@ const CardContainer = () => {
                             setSearchText(e.target.value);
                             console.log(searchText)
                         }} />
-                    <button onClick={() => {
+                    <button className="bg-blue-600" onClick={() => {
                         //fetchdata();  
                         const filteredListOfRestarunt = listOfRestarunt.filter((res) => {
                             console.log(searchText.toLowerCase())
@@ -57,7 +57,7 @@ const CardContainer = () => {
                         setFilteredListOfRestarunt(filteredListOfRestarunt)
 
                     }}>Search</button>
-                    <button className="top-rated-button"
+                    <button className="bg-blue-600"
                         onClick={() => {
                             const filterRes = listOfRestarunt.filter((res) => res.info.avgRatingString > 4.5)
                             setFilteredListOfRestarunt(filterRes);

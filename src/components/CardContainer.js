@@ -9,16 +9,16 @@ const CardContainer = () => {
 
     return listOfRestaurants.length === 0 ? (<Shimmer />) : (
         <>
-            <div className="searchbar flex justify-center">
+            <div className="searchbar flex justify-center p-5">
                 <input 
-                className="w-100 border-blue-200 border-1" 
+                className="w-100 border-red-200 border-1 rounded-sm" 
                 type="text" 
                 value={searchText} 
                 onChange={(e)=>{
                     setSearchText(e.target.value);
                     console.log(searchText)
                 }}/>
-                <button className="border-blue-200 border-1" 
+                <button className="ml-2 p-2 bg-red-600 border-red-800 border-1 rounded-sm text-amber-50" 
                 onClick={()=>{
                   //fetchdata();  
                   const filteredListOfRestarunt = listOfRestaurants.filter((res) => {
@@ -34,7 +34,7 @@ const CardContainer = () => {
                 setFilteredListOfRestaurants(filteredListOfRestarunt)
                   
                 }}>Search</button>
-                <button className="top-rated-button"
+                <button className="ml-2 p-2 bg-red-600 border-red-800 border-1 rounded-sm text-amber-50"
                     onClick={() => {
                         const filterRes = listOfRestaurants.filter((res) => res.info.avgRatingString >= 4.3)
                         console.log(filterRes);
@@ -44,7 +44,7 @@ const CardContainer = () => {
             </div>
 
 
-            <div className="card-container">
+            <div className="grid grid-flow-col grid-rows-2 gap-4">
                 {
                     filteredListOfRestaurants.map((restorantData) =>
                     (

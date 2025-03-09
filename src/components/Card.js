@@ -5,9 +5,9 @@ const Card = (props) => {
     console.log(props);
     const { id, name, cuisines, costForTwo, cloudinaryImageId , avgRatingString} = props?.restoData;
     return (
-        <div className="card">
+        <div className="bg-amber-50">
             <Link className="card-link" to={"/reastaurant/"+id}>
-            <div className="card-img-container">
+            <div className="p-5">
                 <img className="logo-img" src={ RESTAURANT_URL + cloudinaryImageId} />
             </div>
             <h3>{name}</h3>
