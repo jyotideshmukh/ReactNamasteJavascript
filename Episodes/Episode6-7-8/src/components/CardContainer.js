@@ -67,7 +67,7 @@ const CardContainer = () => {
             </div>
 
 
-            <div className="card-container">
+            <div className=" flex justify-center">
                 {
                     filteredListOfRestarunt.map((restorantData) =>
                     (

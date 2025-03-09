@@ -9,16 +9,17 @@ const CardContainer = () => {
 
     return listOfRestaurants.length === 0 ? (<Shimmer />) : (
         <>
-            <div className="searchbar">
+            <div className="searchbar flex justify-center">
                 <input 
-                className="search" 
+                className="w-100 border-blue-200 border-1" 
                 type="text" 
                 value={searchText} 
                 onChange={(e)=>{
                     setSearchText(e.target.value);
                     console.log(searchText)
                 }}/>
-                <button onClick={()=>{
+                <button className="border-blue-200 border-1" 
+                onClick={()=>{
                   //fetchdata();  
                   const filteredListOfRestarunt = listOfRestaurants.filter((res) => {
                     console.log(searchText.toLowerCase())

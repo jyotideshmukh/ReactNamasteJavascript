@@ -6,9 +6,9 @@ const Search = (props) => {
 
     return (
 
-        <div className="searchbar">
+        <div className="flex">
             <input
-                className="search"
+                className="search w-200"
                 type="text"
                 value={searchText}
                 onChange={(e) => {
@@ -16,7 +16,7 @@ const Search = (props) => {
                     console.log(searchText)
                 }}
             />
-            <button onClick={() => {
+            <button className="w-50" onClick={() => {
                 //fetchdata();  
                 const filteredListOfRestarunt = restaurants.filter((res) => {
                     console.log(searchText.toLowerCase())

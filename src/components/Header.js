@@ -4,25 +4,25 @@ import { Link } from "react-router"
 import useOnlineStatus from "../utils/useOnlineStatus"
 const Logo = () => {
     return (
-        <div className="logo-container">
-            <img className="logo-img" src={LOGO_URL} />
+        <div className="logo-container h-30 border-2">
+            <img className="w-50 h-25" src={LOGO_URL} />
         </div>
     )
 }
 const Navbar = () => {
     const [btnLogin, setBtnLogin] = useState("Login");
     return (
-        <div className="nav">
-            <ul>
-                <li>Online Status {useOnlineStatus()===true ? '🟢': '🔴'}</li>
-                <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/about"}>About Us</Link></li>
-                <li><Link to={"/contact"}>Contact Us</Link></li>
-                <li><Link to={"/grocery"}>Grocery</Link></li>
-                <li>Cart</li>
-                <li>
+        <div className="flex">
+            <ul className="flex p-5 m-5 h-20">
+                <li className="p-2 hover:bg-gray-200">Online Status {useOnlineStatus()===true ? '🟢': '🔴'}</li>
+                <li className="p-2  hover:bg-gray-200"><Link to={"/"}>Home</Link></li>
+                <li className="p-2  hover:bg-gray-200"><Link to={"/about"}>About Us</Link></li>
+                <li className="p-2  hover:bg-gray-200"><Link to={"/contact"}>Contact Us</Link></li>
+                <li className="p-2  hover:bg-gray-200"><Link to={"/grocery"}>Grocery</Link></li>
+                <li className="p-2  hover:bg-gray-200">Cart</li>
+                <li className="p-2">
                     <button 
-                    className="btn-login"
+                    className="p-1 bg-blue-300"
                     onClick={()=>{
                         btnLogin === "Login" ?
                         setBtnLogin("Logout"):
@@ -36,7 +36,7 @@ const Navbar = () => {
 
 const Header = () => {
     return (
-        <div className="header">
+        <div className="flex justify-between">
             <Logo></Logo>
             <Navbar></Navbar>
         </div>
